@@ -1,2 +1,2 @@
-# ctd-jupiter
-Repository for my CTD portfolio project
+# yeseul-cho-jupiter
+My portfolio project for CTD Intro to Programming course
