@@ -1,0 +1,44 @@
+body {
+  background-color: #e5eaf5;
+  font-family: "Arimo", sans-serif;
+  color: #494d5f;
+}
+#name-header {
+  font-family: "Arimo", sans-serif;
+  font-size: 3rem;
+  padding: 0.5px 0.5px;
+  margin: 45px;
+  background-color: #a0d2eb;
+  text-align: center;
+  border-radius: 10%;
+}
+h2 {
+  font-size: 2rem;
+  background-color: #d0bdf4;
+  font-weight: 1000;
+  padding: 10px;
+}
+.section-header {
+  margin-bottom: 20px;
+}
+#Experience ul {
+  list-style: none;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  padding: 10px;
+  color: black;
+}
+#Connect ul {
+  padding: 0px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+a {
+  color: #0073b1;
+  font-size: 24px;
+}
+section {
+  margin: 25px 5px 25px 5px;
+}
