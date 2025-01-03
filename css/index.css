@@ -12,28 +12,83 @@ body {
   text-align: center;
   border-radius: 10%;
 }
+#name-container {
+  padding-top: 2ch;
+  display: flex;
+  justify-content: center;
+}
 h2 {
   font-size: 2rem;
   background-color: #d0bdf4;
   font-weight: 1000;
   padding: 10px;
 }
+#profile-picture {
+  margin: 1em;
+  width: 30vw;
+}
+#navigation {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  opacity: 100%;
+  width: 100%;
+  background-color: #e5eaf5;
+}
+#navigation ul {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 0;
+}
+
+#about,
+#experience,
+#skills,
+#projects,
+#connect {
+  scroll-margin-top: 3em;
+}
+
+section {
+  padding-bottom: 25px;
+}
+
+.exp-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.exp-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #d0bdf4;
+  border-radius: 0.8em;
+  padding: 0.5em;
+  width: 20em;
+}
+.one-experience {
+  display: flex;
+  flex-direction: column;
+}
+.date {
+  font-weight: bold;
+  margin-right: 1em;
+  min-width: fit-content;
+}
+
 .section-header {
   margin-bottom: 20px;
-}
-#Experience ul {
-  list-style: none;
-  background-color: #f9f9f9;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  padding: 10px;
-  color: black;
 }
 #Connect ul {
   padding: 0px;
   display: flex;
   gap: 50px;
-  justify-content: center;
+  justify-content: space-evenly;
+  list-style: none;
 }
 a {
   color: #0073b1;
