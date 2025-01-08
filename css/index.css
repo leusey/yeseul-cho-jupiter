@@ -1,31 +1,33 @@
+/* Default (Mobile Style) */
 body {
   background-color: #e5eaf5;
   font-family: "Arimo", sans-serif;
   color: #494d5f;
+  margin: 8px;
 }
 #name-header {
   font-family: "Arimo", sans-serif;
-  font-size: 3rem;
-  padding: 0.5px 0.5px;
-  margin: 45px;
+  font-size: 2.5rem;
+  padding: 10px;
+  margin: 20px;
   background-color: #a0d2eb;
   text-align: center;
   border-radius: 10%;
 }
 #name-container {
-  padding-top: 2ch;
+  padding-top: 1ch;
   display: flex;
   justify-content: center;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: #d0bdf4;
-  font-weight: 1000;
-  padding: 10px;
+  font-weight: bold;
+  padding: 8px;
 }
 #profile-picture {
   margin: 1em;
-  width: 30vw;
+  width: 80vw;
 }
 #navigation {
   position: sticky;
@@ -39,7 +41,7 @@ h2 {
 #navigation ul {
   display: flex;
   flex-direction: row;
-  gap: 4em;
+  gap: 2em;
   justify-content: center;
   list-style: none;
   padding-bottom: 0;
@@ -54,7 +56,8 @@ h2 {
 }
 
 section {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+  margin: 15px 5px;
 }
 
 .exp-container {
@@ -68,7 +71,7 @@ section {
   background-color: #d0bdf4;
   border-radius: 0.8em;
   padding: 0.5em;
-  width: 20em;
+  width: 100%;
 }
 .one-experience {
   display: flex;
@@ -81,19 +84,66 @@ section {
 }
 
 .section-header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 #Connect ul {
   padding: 0px;
   display: flex;
-  gap: 50px;
+  gap: 30px;
   justify-content: space-evenly;
   list-style: none;
 }
 a {
   color: #0073b1;
-  font-size: 24px;
+  font-size: 20px;
 }
 section {
   margin: 25px 5px 25px 5px;
+}
+
+/* Tablet Style */
+@media (min-width: 500px) and (max-width: 1000px) {
+  body {
+    margin: 16px;
+    font-size: 1rem;
+  }
+
+  #name-header {
+    font-size: 3rem;
+    background-color: #88c8e8;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: #494d5f;
+  }
+
+  #profile-picture {
+    width: 50vw;
+    margin: 1.5em;
+  }
+}
+
+/* Desktop Style */
+@media (min-width: 1000px) {
+  body {
+    margin: 24px;
+    font-size: 1.2rem;
+  }
+
+  #name-header {
+    font-size: 4rem;
+    background-color: #70bde6;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    color: #333;
+  }
+
+  #profile-picture {
+    width: 30vw;
+    margin: 2em;
+  }
 }
