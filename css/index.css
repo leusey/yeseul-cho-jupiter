@@ -131,6 +131,17 @@ section {
   margin: 25px 5px 25px 5px;
 }
 
+#Skills ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
 /* Tablet Style */
 @media (min-width: 500px) and (max-width: 1000px) {
   body {
@@ -151,6 +162,10 @@ section {
   #navigation ul {
     flex-direction: row; /* Keep horizontal layout for larger screens */
     gap: 2em;
+  }
+
+  #Skills ul li {
+    width: 50%;
   }
 }
 
@@ -175,5 +190,9 @@ section {
   #navigation ul {
     flex-direction: row; /* Keep horizontal layout for larger screens */
     gap: 2em;
+  }
+
+  #Skills ul li {
+    width: 30%;
   }
 }
