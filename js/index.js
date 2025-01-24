@@ -23,11 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Create a message form
-  const messageForm = document.querySelector("form [name='leave_message']");
+  const messageForm = document.querySelector("form[name='leave_message']");
 
-  messageForm.addEventListener("submit", handleSubmit);
-
-  function handleSubmit(e) {
+  // Add event listener to the form
+  messageForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     // Retrieve form values
@@ -36,34 +35,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const usersMessage = e.target.usersMessage.value;
 
     console.log(`name: ${userName}, email: ${email}, message: ${usersMessage}`);
-  }
 
-  // Display messages in list
-  const messageSection = document.getElementById("messages");
-  const messageList = messageSection.querySelector("ul");
-  messageSection.hidden = false;
-
-  // Create a new message element
-  const newMessage = document.createElement("li");
-  newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a> <span>${usersMessage}</span>`;
-
-  // Add a remove button
-  const removeButton = document.createElement("button");
-  removeButton.innerText = "Remove";
-  removeButton.setAttribute("type", "button");
-  removeButton.addEventListener("click", function (e) {
-    const entry = e.target.parentNode;
-    entry.remove();
-
-    // Hide the messages section when the list is empty
-    if (messageList.children.length === 0) {
-      messageSection.hidden = true;
+    // Display messages in list
+    const messageSection = document.getElementById("messages");
+    if (messageSection) {
+      const messageList = messageSection.querySelector("ul");
+      messageSection.hidden = false;
     }
+
+    // Create a new message element
+    const newMessage = document.createElement("li");
+    newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a> <span>${usersMessage}</span>`;
+
+    // Add a remove button
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.setAttribute("type", "button");
+    removeButton.addEventListener("click", function (e) {
+      const entry = e.target.parentNode;
+      entry.remove();
+
+      // Hide the messages section when the list is empty
+      if (messageList.children.length === 0) {
+        messageSection.hidden = true;
+      }
+    });
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+
+    // Reset the form
+    e.target.reset();
   });
-
-  newMessage.appendChild(removeButton);
-  messageList.appendChild(newMessage);
-
-  // Reset the form
-  e.target.reset();
 });
