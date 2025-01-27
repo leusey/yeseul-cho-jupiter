@@ -142,6 +142,81 @@ section {
   align-items: center;
 }
 
+#Projects ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 100vw;
+  justify-content: center;
+  list-style: none;
+}
+
+#Projects li {
+  background-color: #d0bdf452;
+  padding: 1rem;
+  border: 1px solid #d0bdf4;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#Projects li:hover {
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(153, 153, 153, 1);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(153, 153, 153, 1);
+  box-shadow: 5px 5px 5px 0px rgba(153, 153, 153, 1);
+  background-color: #c6acf6;
+}
+
+.error {
+  color: red;
+}
+
+/* Style the form */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #0073b1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005a8c;
+}
+
+#messages ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style the remove button */
+#messages ul li button {
+  margin-left: 16px; /* Add spacing between the message and the button */
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#messages ul li button:hover {
+  background-color: #ff4c4c;
+}
+
 /* Tablet Style */
 @media (min-width: 500px) and (max-width: 1000px) {
   body {
@@ -166,6 +241,12 @@ section {
 
   #Skills ul li {
     width: 50%;
+  }
+
+  input[type="text"],
+  button {
+    padding: 14px 22px;
+    font-size: 1rem;
   }
 }
 
@@ -194,5 +275,11 @@ section {
 
   #Skills ul li {
     width: 30%;
+  }
+
+  input[type="text"],
+  button {
+    padding: 16px 24px;
+    font-size: 1.2rem;
   }
 }

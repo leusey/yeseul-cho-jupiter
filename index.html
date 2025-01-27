@@ -20,6 +20,7 @@
         <li><a href="#Skills">Skills</a></li>
         <li><a href="#Projects">Projects</a></li>
         <li><a href="#Connect">Connect</a></li>
+        <li><a href="#messageForm">Leave a Message</a></li>
       </ul>
     </nav>
     <div id="name-container">
@@ -30,7 +31,6 @@
       <img
         src="images/grad pic.jpg"
         alt="YeSeul Cho picture"
-        ,
         id="profile-picture"
       />
       <p>
@@ -122,6 +122,35 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <section>
+      <h2>Leave a Message</h2>
+      <form name="leave_message">
+        <label for="usersName">Your Name:</label>
+        <br />
+        <input type="text" name="usersName" required="true" /><br />
+        <label for="usersEmail">Email:</label>
+        <br />
+        <input type="email" name="usersEmail" required="true" /><br />
+        <label for="usersMessageId">Your Message:</label>
+        <br />
+        <textarea
+          name="usersMessage"
+          id="usersMessageId"
+          required="true"
+        ></textarea>
+        <br />
+        <button type="submit" id="submitButton">Submit</button>
+      </form>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <div class="message-container">
+        <ul></ul>
+      </div>
+    </section>
+
     <script src="js/index.js"></script>
   </body>
 </html>
