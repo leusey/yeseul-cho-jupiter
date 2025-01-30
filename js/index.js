@@ -86,18 +86,16 @@ fetch("https://api.github.com/users/leusey/repos")
 
     // Loop through repositories array and:
     for (let i = 0; i < repositories.length; i++) {
-      // - get specific project data out
-      const project = repositories[i].name;
       // - create DOM (HTML) elements
-      const li = document.createElement("li");
-      // - put the data from the project into the DOM element (li)
-      li.innerText = project;
+      const project = document.createElement("li");
+      project.innerText = repositories[i].name;
+      console.log(project);
       // - add DOM elements to your page
-      projectList.appendChild(li);
+      projectList.appendChild(project);
     }
   })
   .catch((error) => {
-    console.log(error);
+    console.error("An error occurred: ", error);
     const errorMessage = document.createElement("p");
     errorMessage.innerText = error.message;
     errorMessage.classList.add("error");
