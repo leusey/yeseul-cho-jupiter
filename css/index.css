@@ -75,13 +75,14 @@ h2 {
 #experience,
 #skills,
 #projects,
-#connect {
+#connect,
+#messageForm {
   scroll-margin-top: 3em;
 }
 
 section {
   margin: 15px 5px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .exp-container {
