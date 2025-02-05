@@ -10,7 +10,7 @@ body {
   font-size: 2.5rem;
   padding: 10px;
   margin: 20px;
-  background-color: #a0d2eb;
+  background-color: #88c8e8;
   text-align: center;
 }
 
@@ -75,13 +75,14 @@ h2 {
 #experience,
 #skills,
 #projects,
-#connect {
+#connect,
+#messageForm {
   scroll-margin-top: 3em;
 }
 
 section {
   margin: 15px 5px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .exp-container {
@@ -231,7 +232,7 @@ button:hover {
 
   #name-header {
     font-size: 3rem;
-    background-color: #88c8e8;
+    padding: 12px;
   }
 
   h2 {
@@ -261,7 +262,6 @@ button:hover {
 
   #name-header {
     font-size: 4rem;
-    background-color: #70bde6;
     padding: 15px;
   }
 
