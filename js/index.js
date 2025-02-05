@@ -27,6 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
 
+  // Initially hide the messages section if there are no messages
+  if (messageList.children.length === 0) {
+    messageSection.hidden = true;
+  }
+
   // Add event listener to the form
   messageForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -39,29 +44,43 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(`name: ${userName}, email: ${email}, message: ${usersMessage}`);
 
     // Make the message section visible
-    if (messageSection) {
-      messageSection.hidden = false;
-    }
+    messageSection.hidden = false;
 
     // Create a new message element
     const newMessage = document.createElement("li");
-    newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a> <span>${usersMessage}</span>`;
+
+    // Create an anchor element for the name
+    const authorLink = document.createElement("a");
+    // Email link
+    authorLink.href = `mailto:${email}`;
+    // Set the text to the author's name
+    authorLink.innerText = userName;
+    // Add spacing between the name and message
+    authorLink.style.marginRight = "10px";
+
+    // Create a span for the message text
+    const messageSpan = document.createElement("span");
+    messageSpan.innerText = usersMessage;
 
     // Add a remove button
     const removeButton = document.createElement("button");
     removeButton.innerText = "Remove";
     removeButton.setAttribute("type", "button");
-    removeButton.addEventListener("click", function (e) {
-      const entry = e.target.parentNode;
-      entry.remove();
+    removeButton.addEventListener("click", function () {
+      newMessage.remove();
 
-      // Hide the messages section when the list is empty
+      // Check after removing if the list is empty
       if (messageList.children.length === 0) {
         messageSection.hidden = true;
       }
     });
 
+    // Append elements to the message item
+    newMessage.appendChild(authorLink);
+    newMessage.appendChild(messageSpan);
     newMessage.appendChild(removeButton);
+
+    // Append the new message to the list
     messageList.appendChild(newMessage);
 
     // Reset the form
@@ -86,11 +105,25 @@ fetch("https://api.github.com/users/leusey/repos")
 
     // Loop through repositories array and:
     for (let i = 0; i < repositories.length; i++) {
-      // - create DOM (HTML) elements
+      // Create DOM (HTML) elements
       const project = document.createElement("li");
-      project.innerText = repositories[i].name;
+
+      // Create an anchor element
+      const projectLink = document.createElement("a");
+      // Set the URL to the repo
+      projectLink.href = repositories[i].html_url;
+      // Set the text to the repo name
+      projectLink.innerText = repositories[i].name;
+      // Open link in a new tab
+      projectLink.target = "_blank";
+      // Security best practice
+      projectLink.rel = "noopener noreferrer";
       console.log(project);
-      // - add DOM elements to your page
+
+      // Add the anchor to the list item
+      project.appendChild(projectLink);
+
+      // Add the list item to the project list
       projectList.appendChild(project);
     }
   })
