@@ -199,6 +199,14 @@ button:hover {
   background-color: #005a8c;
 }
 
+#messages ul {
+  display: flex;
+  flex-direction: column; /* Stack messages vertically */
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
 #messages ul li {
   display: flex;
   align-items: center;

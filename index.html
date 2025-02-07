@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>YeSeul's Portfolio</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,7 +11,6 @@
       rel="stylesheet"
     />
     <link href="css/index.css" rel="stylesheet" />
-    <title>YeSeul's Portfolio</title>
   </head>
   <body>
     <nav id="navigation">
@@ -29,7 +29,7 @@
     <section id="About">
       <h2 class="section-header">About</h2>
       <img
-        src="images/grad pic.jpg"
+        src="images/grad.jpg"
         alt="YeSeul Cho picture"
         id="profile-picture"
       />
@@ -133,17 +133,13 @@
       <form name="leave_message">
         <label for="usersName">Your Name:</label>
         <br />
-        <input type="text" name="usersName" required="true" /><br />
+        <input type="text" name="usersName" id="usersName" required /><br />
         <label for="usersEmail">Email:</label>
         <br />
-        <input type="email" name="usersEmail" required="true" /><br />
+        <input type="email" name="usersEmail" id="usersEmail" required /><br />
         <label for="usersMessageId">Your Message:</label>
         <br />
-        <textarea
-          name="usersMessage"
-          id="usersMessageId"
-          required="true"
-        ></textarea>
+        <textarea name="usersMessage" id="usersMessageId" required></textarea>
         <br />
         <button type="submit" id="submitButton">Submit</button>
       </form>
@@ -151,9 +147,7 @@
 
     <section id="messages">
       <h2 class="section-header">Messages</h2>
-      <div class="message-container">
-        <ul></ul>
-      </div>
+      <ul></ul>
     </section>
 
     <script src="js/index.js"></script>
